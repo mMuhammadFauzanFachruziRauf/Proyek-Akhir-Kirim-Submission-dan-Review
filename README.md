@@ -283,7 +283,7 @@ Meskipun CBF murni berbasis kemiripan item tidak secara langsung memprediksi rat
 
 ### Evaluasi Model Collaborative Filtering (SVD)
 
-**Metrik yang Digunakan:**
+### Metrik yang Digunakan:
 
 1. **Root Mean Squared Error (RMSE)**  
    RMSE mengukur akar kuadrat dari rata-rata selisih kuadrat antara rating aktual dan prediksi. Metrik ini memberikan penalti lebih besar terhadap error yang besar.
@@ -291,7 +291,7 @@ Meskipun CBF murni berbasis kemiripan item tidak secara langsung memprediksi rat
    **Rumus:**
 
    $$
-   \text{RMSE} = \sqrt{ \frac{1}{N} \sum_{(u,i) \in \text{TestSet}} (r_{ui} - \hat{r}_{ui})^2 }
+   \text{RMSE} = \sqrt{ \frac{1}{N} \sum_{(u,i) \in \text{TestSet}} \left( r_{ui} - \hat{r}_{ui} \right)^2 }
    $$
 
 2. **Mean Absolute Error (MAE)**  
