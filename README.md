@@ -290,19 +290,18 @@ Meskipun CBF murni berbasis kemiripan item tidak secara langsung memprediksi rat
 
    **Rumus:**
 
-   \[
-   \text{RMSE} = \sqrt{\frac{1}{N} \sum_{(u,i) \in \text{TestSet}} (r_{ui} - \hat{r}_{ui})^2}
-   \]
+   $$
+   \text{RMSE} = \sqrt{ \frac{1}{N} \sum_{(u,i) \in \text{TestSet}} (r_{ui} - \hat{r}_{ui})^2 }
+   $$
 
 2. **Mean Absolute Error (MAE)**  
    MAE mengukur rata-rata dari selisih absolut antara rating aktual dan prediksi. Metrik ini lebih toleran terhadap outlier dibanding RMSE.
 
    **Rumus:**
 
-   \[
+   $$
    \text{MAE} = \frac{1}{N} \sum_{(u,i) \in \text{TestSet}} |r_{ui} - \hat{r}_{ui}|
-   \]
-
+   $$
 
 **Proses Perhitungan:**
 Model SVD terlatih digunakan untuk membuat prediksi rating pada `testset_surprise`. Fungsi `accuracy.rmse()` dan `accuracy.mae()` dari `Surprise` menghitung error berdasarkan perbandingan rating aktual dan prediksi.
