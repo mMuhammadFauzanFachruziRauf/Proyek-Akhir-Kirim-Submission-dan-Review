@@ -300,7 +300,7 @@ Meskipun CBF murni berbasis kemiripan item tidak secara langsung memprediksi rat
    **Rumus:**
 
    $$
-   \text{MAE} = \frac{1}{N} \sum_{(u,i) \in \text{TestSet}} |r_{ui} - \hat{r}_{ui}|
+   \text{MAE} = \frac{1}{N} \sum_{(u,i) \in \text{TestSet}} \left| r_{ui} - \hat{r}_{ui} \right|
    $$
 
 **Proses Perhitungan:**
