@@ -284,10 +284,25 @@ Meskipun CBF murni berbasis kemiripan item tidak secara langsung memprediksi rat
 ### Evaluasi Model Collaborative Filtering (SVD)
 
 **Metrik yang Digunakan:**
-1.  **Root Mean Squared Error (RMSE):** Mengukur akar kuadrat dari rata-rata selisih kuadrat antara rating aktual dan prediksi. Memberikan penalti lebih besar untuk error yang lebih besar.
-    * Formula: $ RMSE = \sqrt{\frac{1}{N} \sum_{(u,i) \in TestSet} (r_{ui} - \hat{r}_{ui})^2} $
-2.  **Mean Absolute Error (MAE):** Mengukur rata-rata dari selisih absolut antara rating aktual dan prediksi.
-    * Formula: $ MAE = \frac{1}{N} \sum_{(u,i) \in TestSet} |r_{ui} - \hat{r}_{ui}| $
+
+1. **Root Mean Squared Error (RMSE)**  
+   RMSE mengukur akar kuadrat dari rata-rata selisih kuadrat antara rating aktual dan prediksi. Metrik ini memberikan penalti lebih besar terhadap error yang besar.
+
+   **Rumus:**
+
+   \[
+   \text{RMSE} = \sqrt{\frac{1}{N} \sum_{(u,i) \in \text{TestSet}} (r_{ui} - \hat{r}_{ui})^2}
+   \]
+
+2. **Mean Absolute Error (MAE)**  
+   MAE mengukur rata-rata dari selisih absolut antara rating aktual dan prediksi. Metrik ini lebih toleran terhadap outlier dibanding RMSE.
+
+   **Rumus:**
+
+   \[
+   \text{MAE} = \frac{1}{N} \sum_{(u,i) \in \text{TestSet}} |r_{ui} - \hat{r}_{ui}|
+   \]
+
 
 **Proses Perhitungan:**
 Model SVD terlatih digunakan untuk membuat prediksi rating pada `testset_surprise`. Fungsi `accuracy.rmse()` dan `accuracy.mae()` dari `Surprise` menghitung error berdasarkan perbandingan rating aktual dan prediksi.
